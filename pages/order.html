@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietTravel</title>
+
+    <!-- Link awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+
+    <!-- Link lib -->
+    <link rel="stylesheet" href="./assets/lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/lib/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Link bs5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"
+        defer></script>
+    <!-- link js -->
+    <script src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- ========== Start Header Nav ========== -->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top text-danger">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="#">
+                        <img src="../assets/images/logo.png" class="w-100" alt="Vietravel logo">
+                    </a>
+
+                    <div class="d-flex">
+                        <a class="nav-link d-lg-none user_mobile" href="./pages/login.html">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation" data-bs-auto-close="outside">
+                            <span class="navbar-toggler-icon" style="color: #2d4271; font-size: 20px; outline: none;">
+                                <i class="fa fa-bars mt-2" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" id="navlink-du-lich" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Du lịch
+                                </a>
+                                <ul class="dropdown-menu dropdown-full " aria-labelledby="navlink-du-lich">
+                                    <li>Du lịch trong nước</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_blank" rel="nofollow">Vietravel
+                                    MICE</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" hxref="#" id="navlink-van-chuyen" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Vận chuyển
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navlink-van-chuyen">
+                                    <li><a class="dropdown-item" href="#" target="_blank" rel="nofollow noreferrer">Thuê
+                                            xe</a></li>
+                                    <li><a class="dropdown-item" href="#" target="_blank" rel="nofollow noreferrer">Vé
+                                            máy bay</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navlink-tin-tuc" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tin tức
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navlink-tin-tuc">
+                                    <li><a class="dropdown-item" href="#">Tin mới</a></li>
+                                    <li><a class="dropdown-item" href="#">Tin tức du lịch</a></li>
+                                    <li><a class="dropdown-item" href="#">Cẩm nang du lịch</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Kinh nghiệm du
+                                            lịch</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#khuyen-mai-modal">Khuyến
+                                    mãi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="!#">VietravelPlus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="!#">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="navbar-nav ms-auto nav-right">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Bắt đầu tìm kiếm..."
+                                aria-label="Search">
+                            <button class="form-btn btn" type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/login.html">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ========== End Header Nav ========== -->
+
+        <!-- ========== Start tour order ========== -->
+        <div class="TourOrder">
+            <div class="container-fluid">
+
+                <div class="TourOrder__card">
+                    <div class="row">
+                        <div class="TourOrder__img col-12 col-md-4">
+                            <img src="../assets/images/details/tfd_220718105912_424386.jpg" alt="" />
+                        </div>
+                        <div class="TourOrder__main col-12 col-md-8 p-5">
+                            <div class="TourOrder__rating">
+                                <span class="TourOrder__rating--point">9</span>
+                                <span class="TourOrder__rating--feedback">Tuyệt vời</span>
+                            </div>
+                            <div class="TourOrder__title">
+                                <h2>
+                                    Hà Nội - Hạ Long - Ninh Bình - Bái Đính - Tràng An - Tuyệt Tịnh Cốc (Khách sạn 4
+                                    sao)
+                                </h2>
+                            </div>
+                            <div class="TourOrder__desc">
+                                <p class="text">
+                                    Mã Tour: <span>NDSGN1031-106-080723VU-D-7</span>
+                                </p>
+                                <p class="text">
+                                    Khởi hành: <span>08/07/2023</span>
+                                </p>
+                                <p class="text">
+                                    Thời gian: <span>4 ngày</span>
+                                </p>
+                                <p class="text">
+                                    Nơi khởi hành: <span>TP. Hồ Chí Minh</span>
+                                </p>
+                                <p class="text">
+                                    Số chỗ còn nhận: <span>6</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="TourOrder__info">
+                    <div class="row">
+                        <div class="TourOrder__info--detail col-12 col-md-8">
+                            <h2>Tổng quan về chuyến đi</h2>
+                            <div class="customer-contact">
+                                <h3>Thông tin liên lạc</h3>
+                                <div class="row">
+                                    <div class="name col-12 col-md-6">
+                                        <input class="form-control" type="hidden" />
+                                        <input class="form-control" type="hidden" />
+
+                                        <label>Họ và Tên <b>*</b></label>
+                                        <input class="form-control" type="text" />
+
+                                    </div>
+                                    <div class="mail col-12 col-md-6">
+                                        <label>Email <b>*</b></label>
+                                        <input class="form-control" type="text" />
+
+                                    </div>
+                                    <div class="phone col-12 col-md-6">
+                                        <label>Số điện thoại <b>*</b></label>
+                                        <input class="form-control" type="text" />
+
+                                    </div>
+                                    <div class="addess col-12 col-md-6">
+                                        <label>Địa chỉ</label>
+                                        <input class="form-control" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Hành khách</h3>
+                            <div class="customer-quantity">
+                                <div class="change">
+                                    <div class="change-title">
+                                        <h4>Người lớn</h4>
+                                        <p>&gt; 12 tuổi</p>
+                                    </div>
+                                    <div class="change-number">
+                                        <span class="minus btn-click" style="cursor: pointer">
+                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="number" id="adult">1</span>
+                                        <span class="plus btn-click" style="cursor: pointer">
+                                            <i class="fa fa-plus-circle" id="adultPlus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="change">
+                                    <div class="change-title">
+                                        <h4>Trẻ em</h4>
+                                        <p>Từ 5 - 11 tuổi</p>
+                                    </div>
+                                    <div class="change-number">
+                                        <span class="minus btn-click" style="cursor: pointer"><i
+                                                class="fa fa-minus-circle" id="childrenMinus"></i></span>
+                                        <span class="number" id="children">1</span>
+                                        <span class="plus btn-click" style="cursor: pointer"><i
+                                                class="fa fa-plus-circle" id="childrenPlus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="change">
+                                    <div class="change-title">
+                                        <h4>Trẻ nhỏ</h4>
+                                        <p>Từ 2 - 4 tuổi</p>
+                                    </div>
+                                    <div class="change-number">
+                                        <span class="minus btn-click" style="cursor: pointer"><i
+                                                class="fa fa-minus-circle" id="smallchildrenMinus"></i></span>
+                                        <span class="number" id="smallchildren">1</span>
+                                        <span class="plus btn-click" style="cursor: pointer"><i
+                                                class="fa fa-plus-circle" id="smallchildrenPlus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="change">
+                                    <div class="change-title">
+                                        <h4>Em bé</h4>
+                                        <p>Từ 0 - 2 tuổi</p>
+                                    </div>
+                                    <div class="change-number">
+                                        <span class="minus btn-click" style="cursor: pointer"><i
+                                                class="fa fa-minus-circle" id="babyMinus"></i></span>
+                                        <span class="number" id="baby">1</span>
+                                        <span class="plus btn-click" style="cursor: pointer"><i
+                                                class="fa fa-plus-circle" id="babyPlus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="customer-notify">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <p>- Người lớn sinh trước ngày <span>28/05/2011</span></p>
+                                        <p>
+                                            - Trẻ nhỏ sinh từ <span>29/05/2018</span>đến
+                                            <span>28/05/2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <p>
+                                            - Trẻ em sinh từ <span>29/05/2011</span>đến
+                                            <span>28/05/2018</span>
+                                        </p>
+                                        <p>
+                                            - Em bé sinh từ <span>29/05/2021</span>đến
+                                            <span>30/05/2023</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="customer-info">
+                                <h3>Thông tin hành khách</h3>
+                                <div>
+                                    <h5>Người lớn</h5>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Họ tên</th>
+                                                <th>Giới tính</th>
+                                                <th>Ngày sinh</th>
+                                                <th>Dịch vụ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="hidden" v-model="customer.touristID" />
+                                                    <input type="text" placeholder="Vui lòng nhập Họ tên" />
+
+                                                </td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option value="">Giới tính</option>
+                                                        <option value="Nam">Nam</option>
+                                                        <option value="Nu">Nữ</option>
+                                                    </select>
+
+                                                </td>
+                                                <td>
+                                                    <input type="date" />
+
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <input type="checkbox" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="customer-help">
+                                <h5>Quý khách có ghi chú lưu ý gì, hãy nói với chúng tôi !</h5>
+                                <div class="help">
+                                    <textarea rows="5" cols="20"
+                                        placeholder="Vui lòng nhập nội dung lời nhắn bằng tiếng việt hoặc tiếng anh..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="TourOrder__info--group col-12 col-md-4">
+                            <div class="group-support">
+                                <h5>Quý khách cần hỗ trợ?</h5>
+                                <div class="group-contact">
+                                    <a href="#" class="phone d-flex">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <p>Gọi miễn phí qua internet</p>
+                                    </a>
+                                    <a href="#" class="mail d-flex">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <p>Gửi yêu cầu hỗ trợ ngay</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="group-sumary">
+                                <h3>Tóm tắt chuyến đi</h3>
+                                <p>
+                                    Dịch vụ tùy chọn
+                                    <b>Xe suốt tuyến - khách sạn tương đương 4* và 5*</b>
+                                </p>
+                                <p>
+                                    <b>Tour trọn gói </b><span class="number">(6 khách)</span>
+                                </p>
+                                <div class="group-product row my-4">
+                                    <div class="img col-4">
+                                        <img src="../assets/images/details/tfd_220718105912_424386.jpg" class="w-100" />
+                                    </div>
+                                    <div class="title col-8">
+                                        <h4>
+                                            Hà Nội - Hạ Long - Ninh Bình - Bái Đính - Tràng An - Tuyệt Tịnh Cốc (Khách
+                                            sạn 4 sao)
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="group-go my-5">
+                                    <div class="start">
+                                        <h4>Bắt đầu chuyến đi</h4>
+                                        <p>T7, 8 Tháng 7, 2023</p>
+                                    </div>
+                                    <div class="end">
+                                        <h4>Kết thúc chuyến đi</h4>
+                                        <p>T3, 11 Tháng 7, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="group-tourist">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Hành khách</th>
+                                                <th>
+                                                    <div class="total d-flex justify-content-end">
+                                                        <i class="fa-sharp fa-solid fa-users"></i>
+                                                        <span class="mx-1">1</span>
+                                                        người
+                                                    </div>
+
+                                                    <p class="details">
+                                                        <span class="mx-1">1</span>Người lớn
+                                                    </p>
+                                                    <p class="details">
+                                                        <span class="mx-1"></span>Trẻ em
+                                                    </p>
+                                                    <p class="details">
+                                                        <span class="mx-1"></span>Trẻ nhỏ
+                                                    </p>
+                                                    <p class="details">
+                                                        <span class="mx-1"></span>Em bé
+                                                    </p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>Người lớn</td>
+                                                <th>
+                                                    <span>1</span> x
+                                                    <span>7,990,000₫</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>Trẻ em</td>
+                                                <th>
+                                                    <span></span>
+                                                    <span>0đ</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>Trẻ nhỏ</td>
+                                                <th>
+                                                    <span></span>
+                                                    <span>0đ</span>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>Em bé</td>
+                                                <th>
+                                                    <span></span>
+                                                    <span>0đ</span>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Phụ thu phòng riêng</th>
+                                                <th>
+                                                    <span>1,500,000₫</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Giảm giá tour giờ chót</th>
+                                                <th>
+                                                    <span>còn 9 / 10 chỗ</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>Người lớn và trẻ em</td>
+                                                <th>
+                                                    <span></span>
+                                                    <span>1 x 1,000,000₫</span>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Mã giảm giá</th>
+                                                <th>
+                                                    <input type="text" placeholder="Thêm mã" class="p-3 mb-3"
+                                                        style="width: 80px; border: 1px solid #e7e7e7; border-radius: 5px">
+                                                    <input type="submit" class="bg-success border-0 p-3 text-light"
+                                                        value="Áp dụng" style="border-radius: 5px; width: 80px;">
+                                                </th>
+                                            </tr>
+                                            <tr class="price">
+                                                <th>Tổng cộng</th>
+                                                <th>
+                                                    <p>
+                                                        <span>23,490,000đ</span>
+                                                    </p>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="group-submit d-block py-3">
+                                    <button type="submit" class="btn btn-danger w-100 fs-2 py-3">
+                                        ĐẶT NGAY
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------------------------------------------------------>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========== End tour order ========== -->
+
+        <!-- ========== Start Footer ========== -->
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                            <div class="travel-inside">
+                                <h4 class="travel-inside__title">Du lịch trong nước</h4>
+                                <div class="travel-inside__listMenu row">
+                                    <ul class="travel-inside__listMenu-menu col-lg-6 col-12">
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Hà Nội</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Hải Phòng</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Hạ Long</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Huế</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Quảng Bình</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Đà Nẵng</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Quảng Nam</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Nha Trang</a>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="travel-inside__listMenu-menu col-lg-6 col-12">
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Đà Lạt</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Phan Thiết</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Bà Rịa - Vũng Tàu</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Phú Quốc</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Cần Thơ</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">HÀ TIÊN</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Bắc Kạn</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Hà Giang</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--Du lịch ngoài nước-->
+                        <div class="col-lg-3 col-6">
+                            <div class="travel-outside">
+                                <h4 class="travel-outside__title">Du lịch ngoài nước</h4>
+                                <div class="travel-outside__listMenu row">
+                                    <ul class="travel-outside__listMenu-menu col-lg-6">
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Trung Quốc</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Thái Lan</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Malaysia</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Singapore</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Hàn Quốc</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Úc</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Mỹ - Hoa Kỳ</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Nhật Bản</a>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="travel-inside__listMenu-menu col-lg-6 col-12">
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Ấn Độ</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Philippines</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Maldives</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Na Uy</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Tây Ban Nha</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Hà Lan</a>
+                                        </li>
+                                        <li class="travel-outside__listMenu-menu--item">
+                                            <a href="">Đức</a>
+                                        </li>
+                                        <li class="travel-inside__listMenu-menu--item">
+                                            <a href="">Anh</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--Tour-->
+                        <div class="col-lg-3 col-6">
+                            <div class="tour">
+                                <h4 class="tour__title">Dòng Tour</h4>
+                                <div class="tour__listMenu">
+                                    <ul class="tour__listMenu-menu">
+                                        <li class="tour__listMenu-menu--item">
+                                            <a href="">Cao cấp</a>
+                                        </li>
+                                        <li class="tour__listMenu-menu--item">
+                                            <a href="">Tiêu chuẩn</a>
+                                        </li>
+                                        <li class="tour__listMenu-menu--item">
+                                            <a href="">Tiết kiệm</a>
+                                        </li>
+                                        <li class="tour__listMenu-menu--item">
+                                            <a href="">Giá tốt</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Ứng dụng di động-->
+                        <div class="col-lg-3 col-6">
+                            <div class="appMobie">
+                                <h4 class="appMobie__title">Ứng dụng di động</h4>
+                                <div class="appMobie__down">
+                                    <a href=""><img src="../assets/images/footer/ggp.jpg" alt="Android"></a>
+                                    <a href=""><img src="../assets/images/footer/aps.jpg" alt="Ios"></a>
+                                </div>
+                                <div class="appMobie__scan">
+                                    <div class="appMobie__scan-android">
+                                        <p>Android</p>
+                                        <a href=""><img src="../assets/images/footer/image42.jpg" alt="Qr code"></a>
+                                    </div>
+                                    <div class="appMobie__scan-ios">
+                                        <p>iOS</p>
+                                        <a href=""><img src="../assets/images/footer/image43.jpg" alt="Qr code"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Liên hệ -->
+                        <div class="col-lg-3 col-6">
+                            <div class="contact">
+                                <h4 class="contact__title">Liên Hệ</h4>
+                                <div class="contact__info">
+                                    <p>190 Pasteur,Phường Võ Thị Sáu, Quận 3, TP</p>
+                                    <p>HCM</p>
+                                    <p>(+84 28) 3822 8898</p>
+                                    <p>(+84 28) 3829 9142</p>
+                                    <p>info@vietravel.com</p>
+                                </div>
+                                <h4 class="contact__titleSocial">
+                                    Mạng Xã Hội
+                                </h4>
+                                <ul class="contact__socials">
+                                    <li class="contact__socials-social">
+                                        <a href=""><i class="fab fa-facebook-f fa-2x"></i></a>
+                                    </li>
+                                    <li class="contact__socials-social">
+                                        <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+
+                                    </li>
+                                    <li class="contact__socials-social">
+                                        <a href=""><i class="fab fa-viber fa-2x"></i></a>
+
+                                    </li>
+                                    <li class="contact__socials-social">
+                                        <a href=""><i class="fab fa-zalo fa-2x"></i></a>
+
+                                    </li>
+                                    <li class="contact__socials-social">
+                                        <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+
+                                    </li>
+                                </ul>
+                                <div class="contact__call">
+                                    <button class="btn btn-danger">
+                                        <i class="fa-solid fa-phone"></i>
+                                        1900 1839
+                                    </button>
+                                </div>
+                                <p class="contact__datetime">Từ 8:00 - 22:00 hàng ngày</p>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin -->
+                        <div class="col-lg-3 col-6">
+                            <div class="infomation">
+                                <h4 class="infomation__title">Thông tin</h4>
+                                <div class="infomation__listMenu">
+                                    <ul class="infomation__listMenu-menu">
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">Tạp chí du lịch</a>
+                                        </li>
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">Cẩm nang du lịch</a>
+                                        </li>
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">Tin tức</a>
+                                        </li>
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">Sitemap</a>
+                                        </li>
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">FAQs</a>
+                                        </li>
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">Chính sách riêng tư</a>
+                                        </li>
+                                        <li class="infomation__listMenu-menu--item">
+                                            <a href="">Thỏa thuận sử dụng</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="col-lg-6 col-12">
+                            <div class="newsletter">
+                                <h4 class="newsletter__title">Newsletter</h4>
+                                <form action="" class="newsletter__form-email">
+                                    <input type="email" name="" class="form-control w-75"
+                                        placeholder="Email của quý khách" id="email1">
+                                    <button type="submit" class="form-control w-25"><i
+                                            class="fa-regular fa-envelope fa-2x"></i></button>
+                                </form>
+                                <h4 class="newsletter__title">Tìm Kiếm Thông Tin</h4>
+                                <form action="" class="newsletter__form-search">
+                                    <input type="text" name="" class="form-control w-75"
+                                        placeholder="Tour du lịch, điểm đến" id="email2">
+                                    <button type="submit" class="form-control w-25"><i
+                                            class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+                                </form>
+                                <div class="newsletter__security-payment">
+                                    <div class="newsletter__security">
+                                        <h4 class="newsletter__title">Chứng nhận</h4>
+                                        <a href=""><img src="../assets/images/footer/image39.jpg" alt="Chứng nhận"></a>
+                                        <a href=""><img src="../assets/images/footer/image40.jpg" alt="Chứng nhận"></a>
+                                    </div>
+                                    <div class="newsletter__payment">
+                                        <h4 class="newsletter__title">Chấp nhận thanh toán</h4>
+                                        <img src="../assets/images/footer/payment.png" alt="payment">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer bottom-->
+            <div class="footer__bottom p-3">
+                <div class="container-fluid">
+                    <p>Bản quyền của Vietravel ® 2022. Bảo lưu mọi quyền.</p>
+                    <p>Ghi rõ nguồn <a href="">"www.travel.com.vn"</a> <span>® khi sử dụng lại thông tin từ website
+                            này.</span>
+                    </p>
+                    <p>Số giấy phép kinh doanh lữ hành Quốc tế: 79-234/2022/TCDL-GP LHQT</p>
+                </div>
+            </div>
+        </footer>
+        <!-- ========== End Footer ========== -->
+
+
+    </div>
+</body>
+
+</html>

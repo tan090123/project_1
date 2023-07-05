@@ -1,0 +1,23 @@
+.breadcrumb {
+    box-shadow: none !important;
+    margin: 1.5rem 0;
+
+    ul {
+        padding: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+
+        a {
+            color: $nav-clr;
+            font-weight: bold;
+        }
+
+        li:not(:last-child)::after {
+            display: inline-block;
+            margin: 0 0.25rem;
+            content: '>';
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/* Start Tour Place */
+.TourPlace {
+    margin-bottom: 2rem;
+    h2 {
+        padding: 0 10px;
+    }
+
+    &__content--img {
+        margin-bottom: 1rem;
+        img {
+            position: relative;
+            filter: brightness(0.75);
+            height: 22rem;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        i {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -40%);
+            color: #ffff;
+
+            &::before {
+                content: '\f132';
+            }
+        }
+    }
+
+    .content-text {
+        margin-left: 1rem;
+    }
+
+    &__content--place {
+        margin-bottom: 1rem;
+        a {
+            font-family: 'Roboto', sans-serif;
+            color: #2d4271;
+            font-weight: 700;
+            line-height: 1.2em;
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+    }
+
+    &__content--desc {
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.3rem;
+            color: $nav-clr;
+        }
+    }
+}
+/* End Tour Place */
