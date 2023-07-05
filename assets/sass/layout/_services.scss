@@ -1,0 +1,31 @@
+/*  Start: Tour Select */
+.services {
+    padding: 0 10px;
+
+    &__main {
+        text-align: center;
+
+        &--title {
+            font: 17px roboto, sans-serif;
+            color: #2d4271;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+
+        i {
+            background: linear-gradient(180deg, #4d4aef, #adabff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        &--text {
+            font: 15px roboto, sans-serif;
+            color: #2d4271;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
+/*  End: Tour Select */

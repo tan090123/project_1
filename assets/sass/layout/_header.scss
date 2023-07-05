@@ -1,0 +1,105 @@
+
+header {
+    height: 6.5rem;
+}
+
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30rem;
+
+    .logo {
+        max-width: 17rem;
+
+        img {
+            padding: 0 10px;
+        }
+    }
+
+    .user_mobile {
+        font-size: 1.8rem;
+        color: $nav-clr;
+        text-align: end;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+
+    .dropdown-full {
+        width: 100vw;
+    }
+
+    .navbar-nav {
+        li {
+            margin: 0 10px;
+            padding: 8px 0;
+            text-align: start;
+        }
+
+        a {
+            color: $nav-clr;
+            font-size: 1.3rem;
+            font-weight: bold;
+
+            i {
+                font-size: 2.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .nav-right {
+            display: block;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 2px solid #ffc709;
+            height: 5rem;
+            overflow: hidden;
+            border-radius: 5px;
+            // margin: 10px 0;
+            margin-right: 10px;
+
+            .form-control {
+                border: none;
+                outline: none;
+                background: none;
+                width: 20rem;
+                padding: 10px 0 10px 15px;
+                font-size: 1.4rem;
+                color: #2d4271;
+
+                &:focus {
+                    box-shadow: none !important;
+                }
+
+                &::placeholder {
+                    color: $nav-clr;
+                    font-weight: 500;
+                }
+            }
+
+            .form-btn {
+                border: none;
+                cursor: pointer;
+                margin-right: 10px;
+                font-size: 1.7rem;
+
+                &:hover {
+                    background-color: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1023px) {
+    .nav-right {
+        display: none !important;
+    }
+}

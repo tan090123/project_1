@@ -1,0 +1,15 @@
+.tour-carousel {
+    padding: 0 10px;
+    margin-top: 1.5rem;
+}
+.owl-carousel {
+    
+    .owl-item {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .owl-stage {
+        transition: all 0.7s ease-in-out !important;
+    }
+}

@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.tour-product {
+    padding: 10px;
+
+    .product-end {
+        button {
+            font: 16px roboto, sans-serif;
+            font-weight: 700;
+            border: 1px solid #ced4de;
+            background: none;
+            color: #2d4271;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 8px 24px;
+            margin: 24px 0px 0px 0px;
+
+            &:hover {
+                border: 1px solid #2d4271;
+                transition: border 0.5s ease;
+            }
+        }
+    }
+}
+.product-item {
+    border-radius: 1.5rem;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translate(0, -3px);
+    }
+
+    &__image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+    }
+
+    &__category {
+        display: inline-block;
+        background-color: $main-clr;
+        padding: 8px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 0;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 2px;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &__title {
+        a {
+            font-size: 1.6rem;
+            color: $main-clr;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+
+    &__rating {
+        .star-booking {
+            color: #f8ce0b;
+        }
+    }
+
+    &__price {
+        .card-text {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .card-price__current--number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .card-price__current--text {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+    }
+
+    .card-text {
+        font-size: 1.4rem;
+    }
+
+    &__review {
+        margin-bottom: 2rem;
+        &--point {
+            position: relative;
+            display: inline-block;
+            background-color: #fdc432;
+            padding: 5px 10px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: #fff;
+            margin-right: 5px;
+            font-size: 1.8rem;
+            font-weight: bold;
+
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #fdc432;
+            }
+        }
+        &--feedback {
+            margin-left: 4px;
+            color: $main-clr;
+            font-weight: bold;
+        }
+    }
+
+    &__location {
+        font-size: 1.3rem;
+        color: #4d4aef;
+        margin-bottom: 2rem;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    &__summary {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: calc(100% - 30px);
+            top: 1.5rem;
+            width: 0.5px;
+            background-color: #d8d8d8;
+        }
+        .product-item__price {
+            .card-text {
+                color: $main-clr;
+                font-size: 1.6rem;
+                font-weight: bold;
+                line-height: 1.5;
+            }
+
+            .card-price__current--number {
+                font-size: 2.2rem;
+                font-weight: bold;
+                color: #fd5056;
+            }
+
+            .card-date {
+                color: $main-clr;
+                font-size: 1.5rem;
+                line-height: 1.5;
+            }
+        }
+
+        .product-item__btn {
+            button {
+                width: 70%;
+                border: 1px solid #4d4aef;
+                color: #4d4aef;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+                box-shadow: none !important;
+
+                &:hover {
+                    background-color: #4d4aef;
+                    color: #fff;
+                }
+            }
+
+            a {
+                width: 70%;
+                background-color: #fd5056;
+                padding: 8px 0;
+                border: none;
+                font-size: 1.5rem;
+
+                &:hover {
+                    background-color: #de4449;
+                }
+            }
+        }
+    }
+
+    &__details {
+        padding: 5px;
+
+        .product-item__category {
+            display: none;
+            padding: 2px;
+            display: inline-block;
+        }
+
+        .product-item__title {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .product-item__rating {
+            margin-top: 10px;
+
+            .star-booking {
+                display: inline-block;
+
+                .icon.fa.fa-star {
+                    color: gold;
+                }
+            }
+        }
+
+        .product-item__price {
+            margin-top: 15px;
+
+            .card-text {
+                color: $nav-clr;
+            }
+
+            .card-price {
+                display: flex;
+            }
+
+            .card-price__current--number {
+                font-size: 18px;
+                color: #de4449;
+                font-weight: bold;
+            }
+
+            .card-price__current--text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                color: $nav-clr;
+            }
+
+            .btn.btn-primary.btn-sm {
+                background-color: #fd5056;
+                padding: 8px;
+                border: none;
+                font-size: 1.5rem;
+
+                i {
+                    margin-right: 5px;
+                }
+
+                label {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .product-item__review {
+            text-align: end;
+            margin-top: 10px;
+
+            &--point {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            &--feedback {
+                font-size: 14px;
+            }
+        }
+
+        .product-item__location {
+            display: none;
+            margin-top: 10px;
+
+            .fa.fa-location-dot {
+                color: #888;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1024px) {
+    .product-item__image {
+        margin-bottom: 2rem;
+        height: 30rem !important;
+        img {
+            border-radius: 1.5rem;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 739px) {
+    .product-item__image {
+        margin-bottom: 2rem;
+        height: 25rem !important;
+        img {
+            border-radius: 1.5rem;
+        }
+    }
+}
+
+// .product-item__summary .card-text {
+//     font-size: 14px;
+// }
+
+// .product-item__summary .card-price__current--number {
+//     font-size: 20px;
+//     font-weight: 700;
+// }
+
+// .product-item__summary .card-price__current--text {
+//     font-size: 14px;
+//     font-weight: 500;
+//     margin-left: 5px;
+// }
+
+// .product-item__summary button.btn {
+//     margin-right: 5px;
+// }
