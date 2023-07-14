@@ -7,7 +7,8 @@
 
         &:hover {
             box-shadow: 3px 3px 10px rgba(95, 95, 95, 0.5);
-            transform: translateY(-1%);
+            transform: translateY(1%);
+            transition: all 0.25s ease-in-out;
         }
     }
 
@@ -198,7 +199,7 @@
 
             &:hover {
                 border: 1px solid #2d4271;
-                transition: border 0.5s ease;
+                transition: all 0.3s ease-in-out;
             }
         }
     }
