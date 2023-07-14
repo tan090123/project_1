@@ -1439,6 +1439,8 @@ nav .navbar-nav form .form-btn:hover {
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   -webkit-transform: translate(0, -3px);
           transform: translate(0, -3px);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .product-item__image img {
   width: 100%;
@@ -1745,7 +1747,6 @@ nav .navbar-nav form .form-btn:hover {
   background-color: rgba(45, 66, 113, 0.8);
   padding: 0px;
   margin: 0px;
-  border-radius: 10px 10px 0px 0px;
   width: 100%;
   height: 100%;
 }
@@ -1755,7 +1756,6 @@ nav .navbar-nav form .form-btn:hover {
   transition: none !important;
 }
 .TourMain__both--nav .nav-link {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1776,21 +1776,12 @@ nav .navbar-nav form .form-btn:hover {
   cursor: pointer;
   padding: 2rem 3rem;
   color: white;
-  border-radius: 10px 10px 0px 0px;
-  overflow: visible;
   width: 100%;
   height: 100%;
 }
 .TourMain__both--nav .nav-link p {
   padding: 0px;
   margin: 0px;
-}
-.TourMain__both--nav .nav-link .badge {
-  position: absolute;
-  right: -20%;
-  top: 20%;
-  border-radius: 10px;
-  overflow: visible;
 }
 .TourMain__both--nav .nav-link small {
   margin-right: 4rem;
@@ -1805,14 +1796,11 @@ nav .navbar-nav form .form-btn:hover {
   height: 100%;
 }
 .TourMain__both--nav .nav-link:hover {
-  width: 100%;
   color: #4d4aef;
-  border: none;
-  background: white;
-  height: 100%;
+  background: #fff;
 }
 .TourMain .nav-link.active {
-  border-top-left-radius: 10px;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1920,8 +1908,10 @@ nav .navbar-nav form .form-btn:hover {
 .TourCard .card:hover {
   -webkit-box-shadow: 3px 3px 10px rgba(95, 95, 95, 0.5);
           box-shadow: 3px 3px 10px rgba(95, 95, 95, 0.5);
-  -webkit-transform: translateY(-1%);
-          transform: translateY(-1%);
+  -webkit-transform: translateY(1%);
+          transform: translateY(1%);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .TourCard img {
   border-radius: 10px 10px 0px 0px;
@@ -2087,8 +2077,8 @@ nav .navbar-nav form .form-btn:hover {
 }
 .TourCard .TourCard__btn button:hover {
   border: 1px solid #2d4271;
-  -webkit-transition: border 0.5s ease;
-  transition: border 0.5s ease;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* End TourCard */
